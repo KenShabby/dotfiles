@@ -1,0 +1,14 @@
+[window]
+padding.x = 10
+padding.y = 10
+dimensions.columns = 80
+dimensions.lines = 45
+decorations = "Buttonless"
+opacity = 0.9
+option_as_alt = "Both"
+startup_mode = "Fullscreen"
+
+[font]
+normal.family = "MesloLGM Nerd Font Mono"
+
+size = 11
