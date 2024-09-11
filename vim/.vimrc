@@ -13,6 +13,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'nvie/vim-flake8'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'takac/vim-hardtime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,6 +62,13 @@ au BufNewFile, BufRead *.py
 let g:ale_linters = {'python' : ['flake8']}
 
 set number
+set relativenumber
 set colorcolumn=80
 set nowrap
 set hlsearch
+
+" remap esc to kj
+inoremap kj <Esc>
+
+" Vim hardtime stops lazy use of jjjjjj kkkkkkkk to move around
+let g:hardtime_default_on = 1
