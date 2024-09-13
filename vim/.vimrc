@@ -39,7 +39,7 @@ autocmd! bufwritepost .vimrc source %
 " Beter Copy & paste
 set pastetoggle=<F2>
 set clipboard=unnamed
-
+set rtp+=/usr/local/opt/fzf
 set t_Co=256
 
 colorscheme atom-dark-256

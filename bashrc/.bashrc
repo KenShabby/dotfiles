@@ -127,3 +127,6 @@ export PATH="$PATH:/home/brendan/.local/bin"
 
 # pipx suggestion
 eval "$(register-python-argcomplete pipx)"
+
+# FZF integration
+eval "$(fzf --bash)"
