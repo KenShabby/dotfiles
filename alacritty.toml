@@ -9,6 +9,6 @@ option_as_alt = "Both"
 startup_mode = "Fullscreen"
 
 [font]
-normal.family = "MesloLGM Nerd Font Mono"
+normal.family = "MesloLGS Nerd Font Mono"
 
 size = 11

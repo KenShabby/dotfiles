@@ -10,10 +10,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'dense-analysis/ale'
-Plugin 'nvie/vim-flake8'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8' " Python syntax checker
+Plugin 'davidhalter/jedi-vim' " Code completion
+Plugin 'ycm-core/YouCompleteMe' " More code completion
+Plugin 'vim-scripts/indentpython.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'takac/vim-hardtime'
+Plugin 'junegunn/fzf.vim'
+"Plugin 'tpope/vim-projectionist'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,6 +36,9 @@ filetype plugin indent on    " required
 
 " Syntax highlighting
 syntax on
+" YouCompleteMe customizations:
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -45,11 +52,12 @@ set t_Co=256
 colorscheme atom-dark-256
 
 set foldmethod=indent
-
 set foldlevel=99
-
 nnoremap <space> za
 
+nnoremap <C-p> :Files<Cr>
+
+" Python settings
 au BufNewFile, BufRead *.py
 	\set tabstop=4
 	\set softtabstop=4
@@ -59,6 +67,8 @@ au BufNewFile, BufRead *.py
 	\set autoindent
 	\set fileformat=unix
 
+set encoding=utf-8
+
 let g:ale_linters = {'python' : ['flake8']}
 
 set number
@@ -66,9 +76,13 @@ set relativenumber
 set colorcolumn=80
 set nowrap
 set hlsearch
+set incsearch
+set wildmode=longest,list,full " Tab completion
+set wildmenu
 
 " remap esc to kj
 inoremap kj <Esc>
 
 " Vim hardtime stops lazy use of jjjjjj kkkkkkkk to move around
 let g:hardtime_default_on = 1
+let g:hardtime_timeout = 500
