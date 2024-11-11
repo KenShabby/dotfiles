@@ -1,5 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+let mapleader=','
+let maplocalleader='\\'
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,7 +56,6 @@ colorscheme atom-dark-256
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
-
 nnoremap <C-p> :Files<Cr>
 
 " Python settings
@@ -79,6 +80,7 @@ set hlsearch
 set incsearch
 set wildmode=longest,list,full " Tab completion
 set wildmenu
+set showcmd
 
 " remap esc to kj
 inoremap kj <Esc>
@@ -86,3 +88,6 @@ inoremap kj <Esc>
 " Vim hardtime stops lazy use of jjjjjj kkkkkkkk to move around
 let g:hardtime_default_on = 1
 let g:hardtime_timeout = 500
+
+" Fix my common typos
+:iabbrev THanks Thanks
