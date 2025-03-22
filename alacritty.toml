@@ -1,14 +1,14 @@
 [window]
-padding.x = 10
-padding.y = 10
+padding.x = 1
+padding.y = 1
 dimensions.columns = 80
 dimensions.lines = 45
 decorations = "Buttonless"
 opacity = 0.9
 option_as_alt = "Both"
-startup_mode = "Fullscreen"
+startup_mode = "Windowed"
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+normal.family = "0xProto Nerd Font"
 
-size = 11
+size = 12

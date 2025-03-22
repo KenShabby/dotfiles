@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -hAGlF'
@@ -100,12 +100,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-# Fuck you i'll do what I want
-alias vi='vim'
-alias fman='compgen -c | fzf | xargs man'
-alias list_vars='( set -o posix ; set ) | less'
-alias du='du -h'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -122,8 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# starship prompt stuff
-eval "$(starship init bash)"
 
 # Created by `pipx` on 2024-09-08 17:34:11
 export PATH="$PATH:~/.local/bin"
@@ -134,3 +126,16 @@ eval "$(register-python-argcomplete pipx)"
 # FZF integration
 export PATH="$PATH:~/.vim/bundle/fzf.vim/bin"
 eval "$(fzf --bash)"
+
+# Misc path additions
+export PATH="$PATH:/usr/local/sbin"
+export CXXFLAGS="-std=c++20 -Wall -Wextra -pedantic"
+
+# starship prompt stuff
+eval "$(starship init bash)"
+
+# For boot.dev
+export PATH="$PATH:/Users/brendancoen/worldbanc/private/bin"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

@@ -91,7 +91,7 @@ fi
 # some more ls aliases
 alias ll='ls -hAGlF --color=auto'
 alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
+alias l='ls -l --color=auto'
 alias ls='ls -G --color=auto'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -103,7 +103,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 # Fuck you i'll do what I want
-alias vi='vim'
+alias vi='nvim'
+alias nv='nvim'
+alias vim='nvim'
 alias ka='killall -9'
 
 if [ -f ~/.bash_aliases ]; then
@@ -126,6 +128,7 @@ eval "$(starship init bash)"
 
 # Created by `pipx` on 2024-09-08 17:34:11
 export PATH="$PATH:/home/brendan/.local/bin"
+export PATH="$PATH:/usr/bin/"
 
 # pipx suggestion
 eval "$(register-python-argcomplete pipx)"
@@ -133,3 +136,10 @@ eval "$(register-python-argcomplete pipx)"
 # FZF integration
 export PATH="$PATH:/Users/brendancoen/.vim/bundle/fzf.vim/bin"
 eval "$(fzf --bash)"
+
+# Brendan fucking with env variables
+EDITOR=vim
+VISUAL=vim
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
