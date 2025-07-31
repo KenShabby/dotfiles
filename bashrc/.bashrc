@@ -137,9 +137,6 @@ eval "$(register-python-argcomplete pipx)"
 export PATH="$PATH:/Users/brendancoen/.vim/bundle/fzf.vim/bin"
 eval "$(fzf --bash)"
 
-# Brendan fucking with env variables
-EDITOR=vim
-VISUAL=vim
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# eval "$(pyenv virtualenv-init -)"

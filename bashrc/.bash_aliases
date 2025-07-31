@@ -1,6 +1,7 @@
 #
 # Brendan's favorite aliases
 #
+alias ..="cd .."
 alias quickmap="nmap -vv -T4 -p- -sV --max-retries 5"
 alias fman='compgen -c | fzf | xargs man'
 alias list_vars='( set -o posix ; set ) | less'
