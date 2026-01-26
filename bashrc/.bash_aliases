@@ -8,6 +8,7 @@ alias list_vars='( set -o posix ; set ) | less'
 alias du='du -h'
 alias c='clear'
 alias fzf='fzf --preview="bat --color=always {}"'
+alias bat='batcat'
 #
 # NeoVim related
 alias fnv='nvim $(fzf -m --preview="bat --color=always {}")'

@@ -7,3 +7,4 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export PATH="$PATH:/Users/brendancoen/.local/bin"
 export PATH="$PATH:/usr/local/bin"
 fastfetch
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"

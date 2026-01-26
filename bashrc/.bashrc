@@ -129,6 +129,8 @@ eval "$(starship init bash)"
 # Created by `pipx` on 2024-09-08 17:34:11
 export PATH="$PATH:/home/brendan/.local/bin"
 export PATH="$PATH:/usr/bin/"
+# for postgres
+export PATH="$PATH:/opt/postgresql17/bin"
 
 # pipx suggestion
 eval "$(register-python-argcomplete pipx)"
