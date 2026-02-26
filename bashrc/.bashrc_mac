@@ -138,3 +138,14 @@ eval "$(starship init bash)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Testing out bash completion for options. ls in this case:
+_ls() {
+  local cur
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  if [[ $cur == -* ]]; then
+    COMPREPLY=( $(compgen -W "-a -A -d -F -h -H -l -r -R -S -t -X --all --almost-all --directory --classify --human-readable --dereference --reverse --recursive --sort --format --help --version" -- "$cur") )
+  fi
+}
+complete -F _ls ls
