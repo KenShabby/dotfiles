@@ -3,6 +3,9 @@
 #
 alias ..="cd .."
 alias bat='batcat'
+if [[ $OSTYPE == "darwin"* ]]; then
+  unalias bat
+fi
 alias c='clear'
 alias du='du -h'
 alias fman='compgen -c | fzf | xargs man'
