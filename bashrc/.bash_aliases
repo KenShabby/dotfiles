@@ -23,3 +23,4 @@ alias vim='nvim'
 #
 # git related
 alias gcm="git commit -m"
+alias gaa="git add ."
