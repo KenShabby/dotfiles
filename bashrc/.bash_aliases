@@ -14,6 +14,7 @@ alias ka='killall'
 alias list_vars='( set -o posix ; set ) | less'
 alias quickmap="nmap -vv -T4 -p- -sV --max-retries 5"
 alias rg="rg --color=always"
+alias ka='killall -9'
 #
 # NeoVim related
 alias fnv='nvim $(fzf -m --preview="bat --color=always {}")'

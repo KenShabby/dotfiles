@@ -76,8 +76,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -102,11 +100,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-# Fuck you i'll do what I want
-alias vi='nvim'
-alias nv='nvim'
-alias vim='nvim'
-alias ka='killall -9'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -143,3 +136,5 @@ eval "$(fzf --bash)"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 # eval "$(pyenv virtualenv-init -)"
 export PATH=$PATH:$HOME/go/bin
+
+eval "$(direnv hook bash)"
