@@ -25,3 +25,6 @@ alias vim='nvim'
 # git related
 alias gcm="git commit -m"
 alias gaa="git add ."
+#
+# Compiler related
+alias gpp='g++ -std=c++20 -Wall -Wextra -pedantic-errors -Wshadow -Wconversion -g'

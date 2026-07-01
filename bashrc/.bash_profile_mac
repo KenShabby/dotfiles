@@ -1,10 +1,9 @@
+# .bash_profile
 source .bashrc
 EDITOR=/usr/local/bin/vim
-
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
-# Created by `pipx` on 2024-08-31 04:15:38
 export PATH="$PATH:/Users/brendancoen/.local/bin"
 export PATH="$PATH:/usr/local/bin"
 fastfetch
-export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+export PATH="/Library/PostgreSQL/17/bin:$PATH"
+eval "$(direnv hook bash)"

@@ -11,4 +11,4 @@ startup_mode = "Windowed"
 [font]
 normal.family = "0xProto Nerd Font"
 
-size = 12
+size = 10
