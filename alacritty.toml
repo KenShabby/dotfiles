@@ -1,14 +1,21 @@
 [window]
-padding.x = 1
-padding.y = 1
+padding.x = 0
+padding.y = 0
 dimensions.columns = 80
 dimensions.lines = 45
-decorations = "Buttonless"
+decorations = "None"
+decorations_theme_variant = "Dark"
 opacity = 0.9
 option_as_alt = "Both"
-startup_mode = "Windowed"
+startup_mode = "Fullscreen"
 
 [font]
-normal.family = "0xProto Nerd Font"
+normal.family = "MesloLGM Nerd Font Mono"
+#normal.family = "Inconsolata Nerd Font Mono"
+size = 14
 
-size = 10
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
