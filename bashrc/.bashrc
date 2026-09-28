@@ -138,7 +138,6 @@ eval "$(fzf --bash)"
 export PATH=$PATH:$HOME/go/bin
 
 eval "$(direnv hook bash)"
-. "$HOME/.cargo/env"
 
 # opencode
 export PATH=/home/brendan/.opencode/bin:$PATH
