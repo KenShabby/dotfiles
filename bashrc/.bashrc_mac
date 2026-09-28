@@ -114,9 +114,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Created by `pipx` on 2024-09-08 17:34:11
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
+export PATH="/usr/local/opt/postgresql@18/bin:$PATH"
+export PATH="$PATH:/Users/brendancoen/.local/bin"
+export PATH="$PATH:/usr/local/bin"
 
 # pipx suggestion
 eval "$(register-python-argcomplete pipx)"
@@ -128,9 +130,6 @@ eval "$(fzf --bash)"
 # Misc path additions
 export PATH="$PATH:/usr/local/sbin"
 export CXXFLAGS="-std=c++20 -Wall -Wextra -pedantic"
-
-# starship prompt stuff
-eval "$(starship init bash)"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -149,3 +148,9 @@ _ls() {
   fi
 }
 complete -F _ls ls
+. "$HOME/.cargo/env"
+
+# starship prompt stuff
+eval "$(starship init bash)"
+
+eval "$(direnv hook bash)"

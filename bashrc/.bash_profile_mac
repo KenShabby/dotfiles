@@ -1,9 +1,6 @@
 # .bash_profile
-source .bashrc
-EDITOR=/usr/local/bin/vim
 export BASH_SILENCE_DEPRECATION_WARNING=1
-export PATH="$PATH:/Users/brendancoen/.local/bin"
-export PATH="$PATH:/usr/local/bin"
 fastfetch
-export PATH="/Library/PostgreSQL/17/bin:$PATH"
 eval "$(direnv hook bash)"
+. "$HOME/.cargo/env"
+eval "$(starship init bash)"

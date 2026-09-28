@@ -144,3 +144,6 @@ eval "$(direnv hook bash)"
 export PATH=/home/brendan/.opencode/bin:$PATH
 
 fastfetch
+
+# Default Ollama model — qwen3.5:latest (set 2026-08-18)
+alias chat='ollama run qwen3.5:latest'
