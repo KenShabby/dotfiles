@@ -5,7 +5,7 @@ dimensions.columns = 80
 dimensions.lines = 45
 decorations = "None"
 decorations_theme_variant = "Dark"
-opacity = 0.9
+opacity = 0.8
 option_as_alt = "Both"
 startup_mode = "Fullscreen"
 
